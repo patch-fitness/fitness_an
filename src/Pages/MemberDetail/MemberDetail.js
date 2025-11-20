@@ -5,6 +5,7 @@ import Switch from "react-switch";
 import { ToastContainer, toast } from "react-toastify";
 import axios from "axios";
 import "react-toastify/dist/ReactToastify.css";
+import { mockMembers, mockMemberships } from "@/data/mockData";
 const DEFAULT_AVATAR =
   "https://th.bing.com/th/id/OIP.gj6t3grz5no6UZ03uIluiwHaHa?rs=1&pid=ImgDetMain";
 
@@ -40,10 +41,20 @@ const MemberDetail = () => {
   };
 
   useEffect(() => {
-    fetchDataCallback();
-    fetchMembershipCallback();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [id]);
+  const member = mockMembers.find((m) => m.id === Number(id));
+  if (member) {
+    setData(member);
+    setStatus(member.status);
+    setPlanMember(member.plan);
+  } else {
+    setData(null);
+  }
+  setLoading(false);
+}, [id]);
+
+useEffect(() => {
+  setMembership(mockMemberships);
+}, []);
 
   useEffect(() => {
     if (data) {

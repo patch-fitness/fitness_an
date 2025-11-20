@@ -4,6 +4,7 @@ import LogoutIcon from "@mui/icons-material/Logout";
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import PeopleIcon from "@mui/icons-material/People";
 import FitnessCenterIcon from "@mui/icons-material/FitnessCenter";
+import SportsHandballIcon from "@mui/icons-material/SportsHandball";
 import AccountBalanceWalletIcon from "@mui/icons-material/AccountBalanceWallet";
 import { useLocation } from "react-router-dom";
 import { useTheme } from "@/contexts/ThemeContext";
@@ -11,6 +12,7 @@ import { useTheme } from "@/contexts/ThemeContext";
 const menuItems = [
   { icon: DashboardIcon, label: "Dashboard", path: "/dashboard" },
   { icon: PeopleIcon, label: "Thành viên", path: "/members" },
+  { icon: SportsHandballIcon, label: "Huấn luyện viên", path: "/trainers" }, // Trainer item
   { icon: FitnessCenterIcon, label: "Thiết bị", path: "/equipment" },
   { icon: AccountBalanceWalletIcon, label: "Tài chính", path: "/finance" },
 ];

@@ -10,6 +10,18 @@ export  const  mockDashboardData = {
   expired: 156,
   inactive: 73
 };
+export const mockMemberships = [
+  { id: 1, name: "Gói Gold", months: 12, price: 5000000 },
+  { id: 2, name: "Gói Silver", months: 6, price: 3000000 },
+  { id: 3, name: "Gói Bronze", months: 3, price: 1500000 },
+
+];
+// Subscriptions
+export const mockSubscriptions = [
+  { id: 1, memberId: 1, membershipId: 1, trainerId: 1, startDate: "2025-01-01", endDate: "2025-12-31", status: "Active" },
+  { id: 2, memberId: 2, membershipId: 2, trainerId: 1, startDate: "2025-03-01", endDate: "2025-08-31", status: "Active" },
+  { id: 3, memberId: 2, membershipId: 3, trainerId: 2, startDate: "2025-02-01", endDate: "2025-05-31", status: "Expired" },
+];
 
 export const mockEquipment = [
   {
@@ -161,5 +173,95 @@ export const mockFinance = [
     income: 5600000,
     expense: 1200000,
     profit: 5600000 - 1200000,
+  },
+];
+export const mockTrainers = [
+  {
+    id: 1,
+    name: "Nguyễn Văn Hùng",
+    mobileNo: "0905123456",
+    sex: "Male",
+    degree: "Cử nhân Thể dục thể thao",
+    proficelPic: "",
+    salary: 15000000,
+    gymId: 1,
+  },
+  {
+    id: 2,
+    name: "Trần Thị Mỹ Linh",
+    mobileNo: "0917234567",
+    sex: "Female",
+    degree: "HLV chuyên nghiệp",
+    proficelPic: "",
+    salary: 18000000,
+    gymId: 1,
+  },
+  {
+    id: 3,
+    name: "Phạm Quốc Đạt",
+    mobileNo: "0899123456",
+    sex: "Male",
+    degree: "Fitness Trainer Level 2",
+    proficelPic: "",
+    salary: 20000000,
+    gymId: 2,
+  },
+   {
+    id: 4,
+    name: "Phạm Quốc",
+    mobileNo: "0899323456",
+    sex: "Male",
+    degree: "Fitness Trainer Level 2",
+    proficelPic: "",
+    salary: 20000000,
+    gymId: 2,
+  },
+   {
+    id: 5,
+    name: "Phạm  Đạt",
+    mobileNo: "0899123446",
+    sex: "Male",
+    degree: "Fitness Trainer Level 2",
+    proficelPic: "",
+    salary: 20000000,
+    gymId: 2,
+  },
+];
+// src/mockData.js
+export const mockMembers = [
+  {
+    id: 1,
+    name: "Nguyễn Văn A",
+    mobileNo: "0905123456",
+    status: "Active",
+    profilePic: "",
+    nextBillDate: "2024-11-25",
+    createdAt: "2023-08-15"
+  },
+  {
+    id: 2,
+    name: "Trần Thị B",
+    mobileNo: "0912345678",
+    status: "Inactive",
+    profilePic: "",
+    nextBillDate: "2024-12-01",
+    createdAt: "2023-09-20"
+  },
+  {
+    id: 3,
+    name: "Phạm Quốc C",
+    mobileNo: "0899123456",
+    status: "Active",
+    profilePic: "",
+    createdAt: "2023-07-10"
+  },
+  {
+    id: 4,
+    name: "Lê Thị D",
+    mobileNo: "0987654321",
+    status: "Active",
+    profilePic: "",
+    nextBillDate: "2024-12-10",
+    createdAt: "2023-10-05"
   },
 ];

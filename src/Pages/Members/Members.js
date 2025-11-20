@@ -14,7 +14,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import axios from 'axios';
 import { getGymId } from '@/utils/gymUtils';
 import ConfirmDialog from '@/components/ConfirmDialog/ConfirmDialog';
-
+import {mockMembers} from '@/data/mockData';
 const Members = () => {
     const navigate = useNavigate();
     const [addMembership, setAddMemberShip] = useState(false);
@@ -82,10 +82,15 @@ const Members = () => {
     }, [limit]);
 
     useEffect(() => {
-        fetchData(0, 9);
-        setCurrentPage(1);
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, []);
+    // Thay vì fetchData từ backend
+    setAllMembers(mockMembers);
+    setData(mockMembers.slice(0, 9));
+    setTotalData(mockMembers.length);
+    setNoOfPage(Math.ceil(mockMembers.length / 9));
+    setStartFrom(0);
+    setEndTo(Math.min(9, mockMembers.length));
+    setLoading(false);
+}, []);
 
     const handleMemberShip = () => {
         setAddMemberShip(prev => !prev);

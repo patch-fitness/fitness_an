@@ -5,8 +5,10 @@ import Sidebar from "@/components/Sidebar/Sidebar";
 import Dashboard from "@/Pages/Dashboard/Dashboard";
 import Home from "@/Pages/Home/Home";
 import Members from "@/Pages/Members/Members";
+import Trainers from "@/Pages/Trainers/Trainers";
 import GeneralUser from "@/Pages/GeneralUser/GeneralUser";
 import MemberDetail from "@/Pages/MemberDetail/MemberDetail";
+import TrainerDetail from "@/Pages/TrainerDetail/TrainerDetail";
 import Equipment from "@/Pages/Equipment/Equipment";
 import EquipmentDetail from "@/Pages/EquipmentDetail/EquipmentDetail";
 import Finance from "@/Pages/Finance/Finance";
@@ -77,6 +79,8 @@ function App() {
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/members" element={<Members />} />
           <Route path="/member/:id" element={<MemberDetail />} />
+          <Route path="/trainers" element={<Trainers />} />
+          <Route path="/trainers/:id" element={<TrainerDetail/>} /> 
           <Route path="/equipment" element={<Equipment />} />
           <Route path="/equipment/:id" element={<EquipmentDetail />} />
           <Route path="/finance" element={<Finance />} />
